@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 
 Vue.config.productionTip = false
-import TagTextarea from '../packages/index'
-Vue.use(TagTextarea)
+import TestVoicePitch from './packages/index'
+Vue.use(TestVoicePitch)
 
 new Vue({
   render: h => h(App),
