@@ -1,5 +1,6 @@
 # test-voice-pitch
 
+<<<<<<< HEAD
 > 把一个测量人声音高网站的部分功能移植到vue组件。
 >
 > 源网站：https://bideyuanli.com/pp  作者：比的原理。感谢比的原理大佬。
@@ -118,6 +119,27 @@ pureName|1:['真声','混声','假声','假出翔','头声']
 3.源码使用了低版本的p5.js框架，目前p5的最新版本有bug无法调用( https://github.com/processing/p5.js-sound/issues/512 )，因此p5的依赖暂时采用低版本。
 
 
+=======
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+>>>>>>> init
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

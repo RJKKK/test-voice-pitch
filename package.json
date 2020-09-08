@@ -1,5 +1,6 @@
 {
   "name": "test-voice-pitch",
+<<<<<<< HEAD
   "version": "0.1.4",
   "private": false,
   "description": "a component to measure pitches from voice, the source-code is based on:\nhttps://bideyuanli.com/pp",
@@ -16,6 +17,17 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "p5": "^0.10.2",
+=======
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+>>>>>>> init
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -45,6 +57,7 @@
     "> 1%",
     "last 2 versions",
     "not dead"
+<<<<<<< HEAD
   ],
   "repository": {
     "type": "git",
@@ -53,4 +66,7 @@
   "bugs": {
     "url": "https://github.com/RJKKK/test-voice-pitch/issues"
   }
+=======
+  ]
+>>>>>>> init
 }
