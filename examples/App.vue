@@ -2,7 +2,7 @@
   <div id="app">
 <!--    <img alt="Vue logo" src="./assets/logo.png">-->
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <TestVoicePitch></TestVoicePitch>
+    <TestVoicePitch voice-type="woman_low"></TestVoicePitch>
   </div>
 </template>
 

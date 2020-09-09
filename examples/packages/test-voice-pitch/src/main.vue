@@ -1,7 +1,10 @@
 <template>
     <div>
-        <div @touchstart="start" @touchend="stop" class="voiceBtn">点击</div>
-        <div id="canvas"></div>
+        <div @click="start">开始</div>
+        <div @click="stop">停止</div>
+        <div>{{getPitch}}</div>
+        <div>{{getPureName}}</div>
+        <div id="canvas" style="display: none"></div>
     </div>
 </template>
 
@@ -14,6 +17,12 @@
     import top_model from './js/helper/top_model'
     export default {
         name: "TestVoicePitch",
+        props:{
+            voiceType:{
+                type:String,
+                default:'man_high'
+            }
+        },
         data(){
             return{
                 voiceData:data,
@@ -53,21 +62,33 @@
                     this.voiceData.mic_fft.setInput(this.voiceData.mic);
                 }
             },
-            drawCanvas() {
+            drawCanvas(s) {
                 top_model.getValue(this.voiceData);
-                top_model.guessPitch(this.voiceData);
-                console.log(this.voiceData.pitch)
+                top_model.guessPitch(this.voiceData,s);
+                this.$emit("onVoiceIn",this.voiceData.pitch,this.voiceData.max_top?this.voiceData.max_top.getPureName():'')
             },
             start() {
                 if (!this.myp5) {
                     this.myp5 = new p5(this.script, "canvas");
-                    console.log( this.myp5)
                 }
                 this.context.resume();
                 this.voiceData.mic.start()
             },
             stop() {
                 this.voiceData.mic.stop()
+            },
+        },
+        computed:{
+            getPitch(){
+                return this.voiceData.pitch
+            },
+            getPureName(){
+                return this.voiceData.max_top?this.voiceData.max_top.getPureName():''
+            }
+        },
+        watch:{
+            voiceType(newData){
+                this.voiceData.range_name = newData
             }
         }
     }

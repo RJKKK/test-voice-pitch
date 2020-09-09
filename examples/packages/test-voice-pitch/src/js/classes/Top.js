@@ -1,12 +1,13 @@
 import {Locale} from '../../data'
 export default class Top {
-    constructor(index,data){
+    constructor(index,data,s){
         this.total_eng = -1;
         this.left_top = null;
         this.left_low_eng = 0;
         this.overtone_count = 1;
         this.valid = true;
         this.pure = 0;
+        this.s = s
         this.data = data;
         this.right_index = index;
         this.eng = this.data.spectrum[index];
@@ -75,9 +76,9 @@ export default class Top {
     getPure(){
         return this.total_eng / this.self_total_eng;
     }
-    getPureName(s){
+    getPureName(){
         let pure = this.getPure();
-    let freq = this.data.indexToFreq(this.index,s);
+    let freq = this.data.indexToFreq(this.index,this.s);
     if (freq > 900 && pure > -8) {
         return Locale.get('head_voice');
     }
@@ -101,4 +102,5 @@ export default class Top {
         let sone = Math.pow(2, (eng - 40) / 10);
         this.total_eng += sone;
     }
+
 }

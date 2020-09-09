@@ -25,7 +25,7 @@ export default  {
             data.top_eng_range = (data.max_eng - data.min_eng) * data.top_eng_range_rate;
         }
     },
-    guessPitch: function(data) {
+    guessPitch: function(data,s) {
         var spectrum = data.spectrum;
         data.pitch = null;
         data.max_top = null;
@@ -42,7 +42,7 @@ export default  {
                     } else if (eng < spectrum[i - 1] && last_up_index > 0) {
                         var top = null;
                         if (!data.tops[last_up_index]) {
-                            top = new Top(last_up_index,data);
+                            top = new Top(last_up_index,data,s);
                             if (!top.valid) {
                                 top = null;
                             }
@@ -50,7 +50,7 @@ export default  {
                         // check invalid top
                         if (top) {
                             while (last_top) {
-                                if (last_top.axios_extend * 2 <= top.axios_extend) break;
+                                if (last_top.index * 2 <= top.index) break;
 
                                 if (top.eng - low_eng >
                                     data.fake_top_rate * (last_top.eng - low_eng)) {
@@ -104,7 +104,7 @@ export default  {
                 for (let i = 2; i < 10; ++i) {
                     top = data.getTop(data.highest_top.left_index / i, data.highest_top.right_index / i);
                     if (!top) continue;
-                    if (top.axios_extend <= 6) break;
+                    if (top.index <= 6) break;
                     var total_eng = top.calculate(i);
                     if (top.overtone_count <= highest_overtone_count) continue;
                     if (top.total_eng < highest_total_eng) continue;

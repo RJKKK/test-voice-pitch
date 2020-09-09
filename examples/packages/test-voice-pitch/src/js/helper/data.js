@@ -5,21 +5,11 @@ export default {
     spectrum: null,
     tops: null,
     pitch:null,
-    input_pane: true,
-    show_spec: true,
-    show_vspec: true,
-    show_piano: true,
-    show_pitch_on_spec: false,
-    use_mic: true,
     no_mic: false,
-    debug: false,
-
     sample_rate: 44100,
     fft_size: 1024,
     max_db: 140,
-
     lock_spec: false,
-
     width: 800,
     padding_right: 50,
     x_max: 1000,
@@ -38,7 +28,7 @@ export default {
     mix_overtone: false,
     top_eng_range_rate: 0.03,
     fake_top_rate: 4,
-
+    max_top:null,
     pitch_name: 'inter',
     range_name: 'man_high',
 
@@ -71,4 +61,7 @@ export default {
         this.line_value /= this.fft_size / 1024 * this.fft_scale;
 
     },
+    indexToFreq:function(i,s) {
+        return s.map(i, 0, this.fft_size, 0, this.sample_rate / 2);
+    }
 };
