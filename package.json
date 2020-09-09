@@ -1,11 +1,17 @@
 {
   "name": "test-voice-pitch",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "a component to measure pitches from voice, the source-code is based on:\nhttps://bideyuanli.com/pp",
+  "main": "lib/test-voice-pitch.umd.min.js",
+  "keyword": "audio pitch bideyuanli",
+  "author": "RJKKK",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name test-voice-pitch --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
