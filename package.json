@@ -5,7 +5,7 @@
   "description": "a component to measure pitches from voice, the source-code is based on:\nhttps://bideyuanli.com/pp",
   "main": "lib/test-voice-pitch.umd.min.js",
   "keyword": "audio pitch bideyuanli",
-  "author": "RJKKK",
+  "author": "tool-man",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",

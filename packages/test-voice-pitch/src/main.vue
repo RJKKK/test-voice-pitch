@@ -81,7 +81,6 @@
             voiceType:{
                 handler(newData){
                     this.voiceData.range_name = newData;
-                    console.log(this.voiceData.range_name)
                 },
                 immediate:true
             }
