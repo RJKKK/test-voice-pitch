@@ -23,12 +23,12 @@ npm i test-voice-pitch (yarn也可)
       <p>系统判断您的声音为：{{pitch.woman_voice||'未检测到声音'}}</p>
       <p>系统觉得您的声音：{{pureName}}</p>
      <button @click="start">start</button>
-      <button @click="stop">stop</button>
+     <button @click="stop">stop</button>
   </div>
 </template>
 
 <script>
-    import test_voice_pitch  from 'test-voice-pitch'
+import test_voice_pitch  from 'test-voice-pitch'
 export default {
   name: 'App',
     data(){
@@ -44,16 +44,16 @@ export default {
       start(){
           this.$refs['test'].start();
       },
-        stop(){
+      stop(){
             this.$refs['test'].stop();
-        },
-        getData(data){
+      },
+      getData(data){
             this.pitch = data.pitch;
             this.pureName = data.pureName;
-        },
-        beforeStop(data){
+      },
+      beforeStop(data){
           console.log(data)
-        }
+      }
     }
 }
 </script>
