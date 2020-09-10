@@ -4,7 +4,7 @@
 >
 > 源网站：https://bideyuanli.com/pp  作者：比的原理。感谢比的原理大佬。
 >
-> 线上demo：https://app.netlify.com/sites/festive-hoover-d6537d/overview
+> 线上demo：https://festive-hoover-d6537d.netlify.app
 
 ## 安装
 ```

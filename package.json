@@ -1,6 +1,6 @@
 {
   "name": "test-voice-pitch",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "a component to measure pitches from voice, the source-code is based on:\nhttps://bideyuanli.com/pp",
   "main": "lib/test-voice-pitch.umd.min.js",
