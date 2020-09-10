@@ -5,6 +5,7 @@ packages/
 public/
 vue.config.js
 babel.config.js
+*.umd.js
 *.map
 *.html
 

@@ -2,7 +2,7 @@
 
 > 把一个测量人声音高网站的部分功能移植到vue组件。
 >
-> 源网站：https://bideyuanli.com/pp，作者：比的原理。感谢比的原理大佬。
+> 源网站：https://bideyuanli.com/pp  作者：比的原理。感谢比的原理大佬。
 >
 > 线上demo：https://app.netlify.com/sites/festive-hoover-d6537d/overview
 
@@ -13,7 +13,7 @@ npm i test-voice-pitch (yarn也可)
 
 ### 使用示例
 ```vue
-man_low<template>
+<template>
   <div id="app">
     <TestVoicePitch voice-type="woman_low"
                     @onVoiceIn="getData"
@@ -28,7 +28,7 @@ man_low<template>
 </template>
 
 <script>
-    import test_voice_pitch from 'test-voice-pitch'
+    import test_voice_pitch  from 'test-voice-pitch'
 export default {
   name: 'App',
     data(){
@@ -38,7 +38,7 @@ export default {
       }
     },
     comments:{
-        "TestVoicePitch":test_voice_pitch
+        "TestVoicePitch":test_voice_pitch.component
     },
     methods:{
       start(){
@@ -93,8 +93,8 @@ pitch:{
   "inter": "Db6",//测定的音名
   "man": "^c''",//当音源为男声时测定的唱名(abcjs的表示法)
   "woman": "^c'",//当音源为女声时测定的唱名(abcjs的表示法)
-  'man_voice': '#c4',//当音源为测定男声时的唱名
-  'woman_voice': '#c3',//当音源测定为女声时的唱名
+  'man_voice': '#c4',//当音源为男声时测定的唱名
+  'woman_voice': '#c3',//当音源为女声时测定的唱名
   "value": 1108.73 //音源频率
 }
 
@@ -111,11 +111,11 @@ pureName|1:['真声','混声','假声','假出翔','头声']
 
 ## 踩坑提示
 
-1.本地测试时，不可使用localhost。同时如果使用http地址进行测试时，浏览器会禁止调用麦克风，可以通过如下方式绕过：https://medium.com/@Carmichaelize/enabling-the-microphone-camera-in-chrome-for-local-unsecure-origins-9c90c3149339
+1.部署到线上时，不可使用http协议地址。进行本地测试时，不可使用localhost，同时浏览器会禁止调用麦克风，可以通过如下方式绕过：https://medium.com/@Carmichaelize/enabling-the-microphone-camera-in-chrome-for-local-unsecure-origins-9c90c3149339
 
 2.移植比较粗糙（基本是源码照搬，因为没看懂orz），不喜轻喷。如果觉得声音测量算法不准确，请联系比的原理大佬交流。
 
-3.源码使用了低版本的p5.js框架，目前p5的最新版本有bug无法调用(https://github.com/processing/p5.js-sound/issues/512)，因此p5的依赖暂时采用低版本。
+3.源码使用了低版本的p5.js框架，目前p5的最新版本有bug无法调用( https://github.com/processing/p5.js-sound/issues/512 )，因此p5的依赖暂时采用低版本。
 
 
 
