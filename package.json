@@ -1,0 +1,72 @@
+{
+  "name": "test-voice-pitch",
+<<<<<<< HEAD
+  "version": "0.1.4",
+  "private": false,
+  "description": "a component to measure pitches from voice, the source-code is based on:\nhttps://bideyuanli.com/pp",
+  "main": "lib/test-voice-pitch.umd.min.js",
+  "keywords": ["vue","bideyuanli","pitch","audio"],
+  "author": "tool-man",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name test-voice-pitch --dest lib packages/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "p5": "^0.10.2",
+=======
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+>>>>>>> init
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+<<<<<<< HEAD
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RJKKK/test-voice-pitch/tree/vue-2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/RJKKK/test-voice-pitch/issues"
+  }
+=======
+  ]
+>>>>>>> init
+}
